@@ -6,5 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Use current configuration
-RUN apt-get update && apt-get install zsh -y
+RUN apt-get update && apt-get install -y \
+    zsh \
+    nano
 RUN PATH="$PATH:/usr/bin/zsh"
